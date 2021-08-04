@@ -1,0 +1,40 @@
+.row {
+  max-width: $grid-width;
+  margin: 0 auto;
+
+  @include breakpoint(under-900) {
+    // max-width: 50rem;
+    padding: 0 3rem;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: $gutter-vertical;
+
+    @include breakpoint(under-900) {
+      margin-bottom: $gutter-vertical-small;
+    }
+  }
+
+  @include clearfix;
+
+  [class^="col-"] {
+    float: left;
+
+    &:not(:last-child) {
+      margin-right: $gutter-horizontal;
+
+      @include breakpoint(under-900) {
+        margin-right: 0;
+        margin-bottom: $gutter-vertical-small;
+      }
+    }
+
+    @include breakpoint(under-900) {
+      width: 100% !important;
+    }
+  }
+  
+  .col-1-of-2 {
+    width: calc((100% - #{$gutter-horizontal}) / 2);
+  }
+}

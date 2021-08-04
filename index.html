@@ -1,12 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>hello, world</title>
-</head>
-<body>
-  hello, world
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Thanks for taking a look at my portfolio! I'm a web developer looking to get hired so if you like what you see then let's get in contact.">
+
+        <link rel="stylesheet" href="css/style.css">
+        
+        <title>James Quillin | Web Developer</title>
+    </head>
+    <body>
+        <header class="header">
+            <div class="header__text-box">
+                <h1 class="heading-primary">
+                    <span class="heading-primary--main">James Quillin</span>
+                    <span class="heading-primary--sub">Web Developer</span>
+                </h1>
+            </div>
+        </header>
+
+        <main>
+            <section class="section-projects">
+                <div class="u-center-text u-margin-bottom-large">
+                    <h2 class="heading-secondary">Projects</h2>
+                </div>
+
+                <div class="row">
+
+                    <div class="project">
+
+                        <img
+                                alt="Project Screenshot"
+                                class="project__img"
+                                src="images/vocab-viewer-screenshot.png"
+                        >
+
+                        <div class="project__info">
+                            <h3 class="heading-tertiary u-margin-bottom-small">Japanese Vocab Viewer</h3>
+                            <p class="paragraph u-margin-bottom-small">Build vocabulary lists from a subtitle file, or text that is copied and pasted, or even a link to a webpage. Filter the lists to see exactly what parts you want. The lists can also be saved and even exported for the popular Anki flashcard program.</p>
+                            <ul class="project__tags u-margin-bottom-small">
+                                <li class="project__tag">Electron</li>
+                                <li class="project__tag">HTML</li>
+                                <li class="project__tag">CSS</li>
+                                <li class="project__tag">JavaScript</li>
+                                <li class="project__tag">NodeJS</li>
+                            </ul>
+                            <ul class="project__links u-margin-bottom-small">
+                                <li class="project__link"><a href="#project-demo-1" class="button">View Demo</a></li>
+                                <li class="project__link"><a href="https://github.com/JamesQuillin/vocab-viewer" target="_blank" class="button">View Source</a></li>
+                                <li class="project__link"><a href="https://github.com/JamesQuillin/vocab-viewer#download-windows" target="_blank" class="button">Download (Windows)</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="popup" id="project-demo-1">
+                            <a href="#section-projects" class="popup__close--outside" onclick="const video = document.getElementById('video-1'); video.pause(); video.currentTime = 0;"></a>
+                            <div class="popup__content">
+                                <video class="bg-video__content" id="video-1" controls>
+                                    <source src="videos/vocab-viewer-demo.mp4" type="video/mp4">
+                                        Your browser is not supported
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div class="project">
+
+                        <img                        
+                                alt="Project Screenshot"
+                                class="project__img"
+                                src="images/uno-app-screenshot.png"
+                        >
+
+                        <div class="project__info">
+                            <h3 class="heading-tertiary u-margin-bottom-small">Online Uno Game</h3>
+                            <p class="paragraph u-margin-bottom-small">A virtual deck of cards built with Socket.io. My family likes playing Uno so I built this so we could play over Zoom. Start a room and deal the cards and everyone can play their own hand from their phone or laptop or anything else.</p>
+                            <ul class="project__tags u-margin-bottom-small">
+                                <li class="project__tag">HTML</li>
+                                <li class="project__tag">CSS</li>
+                                <li class="project__tag">JavaScript</li>
+                                <li class="project__tag">Socket.io</li>
+                                <li class="project__tag">NodeJS</li>
+                                <li class="project__tag">ExpressJS</li>
+                                <li class="project__tag">DigitalOcean</li>
+                                <li class="project__tag">Linux</li>
+                                <li class="project__tag">VPS</li>
+                            </ul>
+                            <ul class="project__links u-margin-bottom-small">
+                                <li class="project__link"><a href="#project-demo-2" class="button">View Demo</a></li>
+                                <li class="project__link"><a href="https://github.com/JamesQuillin/uno-game" target="_blank" class="button">View Source</a></li>
+                                <li class="project__link"><a href="http://143.198.106.140/" target="_blank" class="button">Live Website</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="popup" id="project-demo-2">
+                            <a href="#section-projects" class="popup__close--outside" onclick="const video = document.getElementById('video-2'); video.pause(); video.currentTime = 0;"></a>
+                            <div class="popup__content">
+                                <video class="bg-video__content" id="video-2" controls>
+                                    <source src="videos/uno-app-demo.mp4" type="video/mp4">
+                                        Your browser is not supported
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div class="project">
+
+                        <img                        
+                                alt="Project Screenshot"
+                                class="project__img"
+                                src="images/personal-website-screenshot.png"
+                        >
+
+                        <div class="project__info">
+                            <h3 class="heading-tertiary u-margin-bottom-small">Personal Blog</h3>
+                            <p class="paragraph u-margin-bottom-small">A website with more info about me as well as a place to write about various programming topics and keep notes on some of my favorite recipes. Built with Jekyll and hosted on a VPS through DigitalOcean.</p>
+                            <ul class="project__tags u-margin-bottom-small">
+                                <li class="project__tag">Jekyll</li>
+                                <li class="project__tag">HTML</li>
+                                <li class="project__tag">CSS</li>
+                                <li class="project__tag">JavaScript</li>
+                                <li class="project__tag">NodeJS</li>
+                                <li class="project__tag">ExpressJS</li>
+                                <li class="project__tag">DigitalOcean</li>
+                                <li class="project__tag">Linux</li>
+                                <li class="project__tag">VPS</li>
+                                <li class="project__tag">HTTPS</li>
+                            </ul>
+                            <ul class="project__links u-margin-bottom-small">
+                                <li class="project__link"><a href="https://jamesquillin.com" target="_blank" class="button">Live Website</a></li>
+                                <li class="project__link"><a href="https://github.com/JamesQuillin/personal-website" target="_blank" class="button">View Source</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div class="project">
+
+                        <img                        
+                                alt="Project Screenshot"
+                                class="project__img"
+                                src="images/library-app-screenshot.png"
+                        >
+
+                        <div class="project__info">
+                            <h3 class="heading-tertiary u-margin-bottom-small">Library Checkout System</h3>
+                            <p class="paragraph u-margin-bottom-small">Built for a fictional system of Library branches, this lets employees manage library assets and patron information.</p>
+                            <ul class="project__tags u-margin-bottom-small">
+                                <li class="project__tag">MVC</li>
+                                <li class="project__tag">C#</li>
+                                <li class="project__tag">.NET</li>
+                                <li class="project__tag">EF-Core</li>
+                            </ul>
+                            <ul class="project__links u-margin-bottom-small">
+                                <li class="project__link"><a href="#project-demo-4" class="button">View Demo</a></li>
+                                <li class="project__link"><a href="https://github.com/JamesQuillin/library-management-app" target="_blank" class="button">View Source</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="popup" id="project-demo-4">
+                            <a href="#section-projects" class="popup__close--outside" onclick="const video = document.getElementById('video-4'); video.pause(); video.currentTime = 0;"></a>
+                            <div class="popup__content">
+                                <video class="bg-video__content" id="video-4" controls>
+                                    <source src="videos/library-app-demo.mp4" type="video/mp4">
+                                        Your browser is not supported
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="row">
+                <div class="col-1-of-2">
+                    <div class="footer__navigation">
+                        <ul class="footer__list">
+                            <li class="footer__item"><a href="https://jamesquillin.com/about#contact" class="footer__link">Contact</a></li>
+                            <li class="footer__item"><a href="https://jamesquillin.com/about" class="footer__link">About</a></li>
+                            <li class="footer__item"><a href="https://jamesquillin.com" class="footer__link">Blog</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-1-of-2">
+                    <p class="footer__text">
+                        Thanks for taking a look at my portfolio! I'm a web developer looking to get hired so if you like what you see then let's get in contact.
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            // this script fades in projects when scrolled into range
+            let projects = document.querySelectorAll('.project');
+
+            function isVisible(element) {
+              let dimensions = element.getBoundingClientRect();
+
+              // top edge of the element
+              // if >= 0 then the top edge is in view on the page
+              // if < 0 then the page has scrolled down at least partly past the top edge of the project element
+              let top = dimensions.top;
+
+              // bottom edge of the element
+              // if <= window.innerHeight then the bottom edge is in view on the page
+              // if > window.innerHeight then the page hasn't scrolled far enough down to see the bottom edge of the element
+              let bottom = dimensions.bottom;
+
+              let halfHeight = Math.abs(top - bottom) / 2;
+
+              if ( bottom <= (window.innerHeight + halfHeight * 1.1) ) {
+                return true;
+              }
+
+              return false;
+            }
+
+            document.addEventListener('scroll', () => {
+              projects.forEach(project => {
+                if (isVisible(project)) {
+                  project.classList.add('project__shown');
+                } else {
+                  project.classList.remove('project__shown');
+                }
+              });
+            });
+        </script>
+    </body>
 </html>

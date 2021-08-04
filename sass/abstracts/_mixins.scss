@@ -1,0 +1,45 @@
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin center-block-horizontal-vertical {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+// plan for how to make everything responsive: 
+//          base and typography
+//          then general layout and grid
+//          then page layouts
+//          and finally components
+
+@mixin breakpoint($breakpoint) {
+  @if $breakpoint == under-450 { // phones
+    @media only screen and (max-width: 28.125em) { @content }; // max 450px
+  }
+
+  @if $breakpoint == under-600 { // phones
+    @media only screen and (max-width: 37.5em) { @content }; // max 600px
+  }
+
+  @if $breakpoint == under-900 { // portrait tablets
+    @media only screen and (max-width: 56.25em) { @content }; // max 900px
+  }
+
+  @if $breakpoint == under-1200 { // landscape tablets
+    @media only screen and (max-width: 75em) { @content }; // max 1200px
+  }
+
+  // 1200px - 1800px are covered with default styles
+
+  @if $breakpoint == over-1800 { // large desktops
+    @media only screen and (min-width: 112.5em) { @content }; // min 1800px
+  }
+}

@@ -1,0 +1,84 @@
+.project {
+  padding: 1rem;
+  box-shadow: 0 3rem 6rem rgba($color-black, .1);
+  background-color: rgba($color-white, .6);
+  display: flex;
+  transition: all .3s;
+  opacity: 0;
+
+  @include breakpoint(under-900) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  &__shown {
+    animation: moveInBottom .3s ease-out;
+    animation-fill-mode: backwards;
+    opacity: 1;
+  }
+
+  &:hover {
+    // transform: scale(1.05);
+  }
+
+  &__img {
+    // @include breakpoint(over-1800) {
+    //   max-width: 450px;
+    // }
+
+    height: 30rem;
+    max-width: 450px;
+    margin: 2rem;
+    object-fit: cover; // help preserve aspect ratio
+
+    @include breakpoint(under-900) {
+      height: auto;
+      max-width: 400px;
+    }
+
+    @include breakpoint(under-600) {
+      height: auto;
+      max-width: 400px;
+      width: 90%;
+    }
+  }
+
+  &__info {
+    margin: 2rem;
+  }
+
+  &__tags {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__tag {
+    font-size: 1.4rem;
+    background-color: $color-grey-light-2;
+    border-radius: 3px;
+    margin-right: 1rem;
+    padding: .5rem;
+    margin-top: 1rem;
+
+    &:hover {
+      background-color: $color-grey-light-3;
+      cursor: default;
+    }
+  }
+
+  &__links {
+    list-style-type: none;
+    display: flex;
+  }
+
+  &__link {
+    font-size: 1.4rem;
+    margin-right: 1rem;
+    padding: .5rem;
+
+    &:first-child {
+      padding: .5rem .5rem .5rem 0;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+
+html {
+
+  font-size: 62.5%; // 1rem == 10px
+  // font-size: 50%; // 1rem == 8px
+
+  // The font-size (which sets the base for all the other styles 
+  // using rem units) is set that 1rem == 10px for ease of design.
+  // That base is then adjusted slightly up or down for larger or 
+  // smaller screens as well, with the default design being for 
+  // a screen between 1200px and 1800px using a desktop-first 
+  // approach
+
+  @include breakpoint(over-1800) {
+    // font-size: 75%;
+    font-size: 62.5%;
+  }
+
+  @include breakpoint(under-1200) {
+    font-size: 56.25%;
+  }
+
+}
+
+body {
+  box-sizing: border-box;
+  padding: 3rem;
+
+  @include breakpoint(under-900) {
+    padding: 0;
+  }
+}
+
+::selection {
+  background-color: $color-primary;
+  color: $color-white;
+}
